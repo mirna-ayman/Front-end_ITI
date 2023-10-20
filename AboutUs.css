@@ -1,0 +1,198 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+h2 {
+  margin: 1rem;
+}
+
+.header {
+  color: #3d5f00;
+  text-align: center;
+  padding: 100px 20px 20px; 
+  position: relative;
+}
+
+
+
+.header::before {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px; 
+  height: 60px;
+  border-radius: 50%; 
+  z-index: -1; 
+}
+
+
+
+.header h1 {
+  position: relative;
+  z-index: 1; 
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+
+.left, .right {
+  flex: 1;
+  padding: 20px;
+}
+
+button {
+  background-color: #3d5f00;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  margin: 2rem;
+  font-size: 1rem;
+}
+
+.header::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  color: #aaa;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.header span{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header .aboutus-subtitle{
+  position: absolute;
+  opacity: 0.2; 
+  font-size: 4rem;
+  font-weight: bold;
+  top: 64px;
+}
+
+.parent-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row; 
+  }
+  .left, .right {
+      flex: 1;
+  }
+  
+  
+
+  .top-line .left {
+      margin-right: auto; 
+  }
+
+  .top-line .right {
+      display: flex;
+      align-items: center;
+  }
+}
+
+
+.border-container {
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+
+.border-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 5px solid white;
+  z-index: 1;
+}
+
+
+.border-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50%;
+  height: 5px;
+  background-color: #00FF00; 
+  z-index: 2;
+}
+
+
+.border-container .left-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 50%;
+  width: 5px;
+  background-color: #00FF00; 
+  z-index: 3;
+}
+
+
+iframe {
+  width: 100%;
+  height: 15rem;
+  border: none; 
+  position: relative; 
+  padding: 1rem;
+}
+
+.video-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height:width) */
+  position: relative;
+  border: 5px solid white; /* Add the border to the container */
+  overflow: hidden; /* Hide any overflowing content within the container */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none; /* Disable pointer events on the iframe to make it clickable */
+}
